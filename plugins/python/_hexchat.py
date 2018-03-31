@@ -316,7 +316,7 @@ class Context:
         self._ctx = ctx
 
     def __eq__(self, value):
-        return self.__ctx == value._ctx
+        return self._ctx == value._ctx
 
     @contextmanager
     def __change_context(self):
