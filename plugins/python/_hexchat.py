@@ -288,6 +288,7 @@ def get_pluginpref(name):
     if lib.hexchat_pluginpref_get_str(lib.ph, name, string_out) is not 1:
         return None
 
+    string = ffi.string(string_out)
     # This API stores everything as a string so we have to figure out what
     # its actual type was supposed to be.
     if len(string) > 12:  # Can't be a number
